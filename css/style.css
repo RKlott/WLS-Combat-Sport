@@ -515,10 +515,239 @@ header nav .hamburger {
   padding: 0.5rem 2rem;
 }
 
-.footer-content div {
+/*Charte graphique liens*/
+a:link {
+  color: rgb(163, 0, 3);
+}
+
+a:visited {
+  color: rgb(60, 0, 0);
+}
+
+a:hover {
+  color: rgb(169, 159, 150);
+}
+
+a:active {
+  color: rgb(163, 0, 3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Pour inclure les marges internes et les bordures dans les marges des parents*/
+}
+
+body {
+  background-image: url(images/deutschlandnoback.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 500px;
+  background-position: center;
+  background-color: rgb(5, 6, 9);
+}
+
+.header1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  border-bottom: 1px solid var(--darkgold);
+  border-radius: 20px;
+  box-shadow: 0 0 100px rgba(255, 217, 0, 0.329);
+}
+
+/*-------------------------PARTIE LECTURE---------------------------*/
+.contact-lecture {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgb(51, 51, 51);
+  border-radius: 8px;
+  text-align: left;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.contact-lecture h2 {
+  color: white;
+}
+
+/*-------------------------FIN PARTIE LECTURE---------------------------*/
+h1 {
+  color: white;
+  font-size: 8em;
+  text-align: center;
+  margin: 100px 0px 50px 0px;
+  width: 100%;
+}
+
+/*--------------------------PARTIE CONTACT----------------------------*/
+.contact-form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgb(51, 51, 51);
+  border-radius: 8px;
+  text-align: left;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.contact-form .contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.contact-form .contact-box .contact-inputform {
+  padding: 5px;
+  margin-top: 10px;
+}
+.contact-form .contact-box .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+.contact-form .contact-box .envoyer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-form .contact-box .envoyer .contact-input {
+  color: white;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 7px;
+}
+
+/*--------------------------FIN PARTIE CONTACT----------------------------*/
+/*-----------------------------MEDIA QUERY---------------------------------*/
+/*On peut ecrire min-width ou max-width personnellement je prefere le max*/
+/*EXEMPLE*/
+/*Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px 
+      @media screen and (max-width: 1280px)
+  Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px 
+      @media all and (min-width: 1024px) and (max-width: 1280px)
+  Sur tous types d'écrans orientés verticalement 
+      @media all and (orientation: portrait)
+      REGARDER le overflow : scroll ,pour un texte qui dépasse de sa boite parent*/
+@media screen and (max-width: 800px) {
+  .header1 {
+    display: none;
+  }
+  .menu-burger {
+    display: block;
+  }
+  .images1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    gap: 20%;
+  }
+  .imgsection1 {
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+    transform: scaleX(-1);
+    box-shadow: 5px 10px 50px rgba(178, 34, 34, 0.164);
+  }
+  .imgsection2 {
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+    box-shadow: 5px 10px 50px rgba(178, 34, 34, 0.164);
+  }
+  .txtbox {
+    font-size: 23px;
+  }
+  .vidéo {
+    width: 100%;
+  }
+  .rammstein-form {
+    margin-bottom: 20px;
+  }
+  .rammstein-lecture {
+    margin-top: 200px;
+  }
+}
+/*----------------------------FOOTER-----------------------------*/
+footer {
+  background-color: rgb(5, 6, 9);
+  padding: 10px 0 0 0;
+  width: 100%;
+  /*----------------------------ANCHOR-----------------------------*/
+}
+footer .footer-anchor {
   display: flex;
   justify-content: center;
 }
-.footer-content img {
-  width: 20%;
-}/*# sourceMappingURL=style.css.map */
+footer .footer-anchor a {
+  display: inline-block;
+  background-color: rgb(5, 6, 9);
+  color: white;
+  padding: 7px 70px 7px 70px;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 20px;
+  border-radius: 5px;
+}
+footer .footer-anchor a:hover {
+  background-color: rgb(60, 0, 0);
+  transition: background-color 0.3s;
+}
+footer section {
+  /*----------------------------FIN ANCHOR-----------------------------*/
+}
+footer section .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer section .footer-content .logo {
+  background-color: rgb(169, 159, 150);
+  width: 10em;
+  margin: 0 0 20px 20px;
+  border: 0.1px solid rgb(60, 0, 0);
+  box-shadow: 0 0 10px rgb(169, 159, 150);
+  border-radius: 5px;
+}
+footer section .footer-content ul {
+  display: flex;
+  justify-content: center;
+  grid-gap: 30px;
+  padding-inline-start: 0;
+}
+footer section .footer-content ul li {
+  list-style-type: none;
+}
+footer section .footer-content ul li a {
+  text-decoration: none;
+}
+footer section .footer-content .footer-socials {
+  display: flex;
+  grid-gap: 40px;
+  margin-right: 50px;
+  /*Important pour le transform*/
+}
+footer section .footer-content .footer-socials .groslogo {
+  display: inline-block;
+}
+footer section .footer-content .footer-socials .groslogo:hover {
+  transform: scale(1.7);
+}
+footer section .footer-bottom {
+  background-color: rgb(51, 51, 51);
+  border-top: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/*----------------------------FIN FOOTER-----------------------------*//*# sourceMappingURL=style.css.map */
