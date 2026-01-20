@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -309,17 +310,28 @@ template {
 }
 
 /* SCSS RGB */
-main {
-  height: 400px;
-  width: 150px;
-  background-color: black;
+.underline-effect {
+  display: inline-block;
+  position: relative;
 }
-main header .logo {
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Distance par rapport au texte */
+  width: 50%; /* Taille de la barre */
+  height: 1px; /* Épaisseur */
+  background-color: black;
+  transform: translateX(-50%);
+}
+
+header .logo {
   display: flex;
   justify-content: left;
   width: 200px;
 }
-main header .NavBarLink {
+header .NavBarLink {
   display: flex;
   justify-content: space-around;
 }
