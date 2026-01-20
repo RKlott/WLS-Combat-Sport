@@ -5,6 +5,10 @@ header {
   background-color: #fff;
   border-bottom: 1px solid $graphite;
 
+  button{
+    display: none;
+  }
+
   @include media-max($media-portrait) {
     width: 100%;
     position: fixed;
