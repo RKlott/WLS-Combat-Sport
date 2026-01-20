@@ -342,12 +342,12 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 2rem 0 2rem;
-  border-bottom: solid 1px black;
 }
 @media screen and (max-width: 900px) {
   header {
     width: 100%;
     position: fixed;
+    border-bottom: none;
   }
 }
 header .header-logo-container {
@@ -505,13 +505,22 @@ header nav .hamburger {
 .index-main .discover-us .txt-container {
   width: 50%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 @media screen and (max-width: 900px) {
   .index-main .discover-us .txt-container {
     width: 80%;
   }
 }
+.index-main .discover-us .txt-container a {
+  align-self: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .index-main .discover-us .txt-container button {
+  margin-top: 2rem;
   padding: 0.5rem 2rem;
   background-color: rgb(163, 0, 3);
   color: rgb(255, 244, 244);
@@ -520,7 +529,7 @@ header nav .hamburger {
   border-radius: 1rem;
 }
 .index-main .discover-us .txt-container button:hover {
-  background-color: rgb(214, 0, 3.9386503067);
+  cursor: pointer;
 }
 
 /*Charte graphique liens*/
