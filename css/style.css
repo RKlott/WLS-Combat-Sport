@@ -741,7 +741,7 @@ footer section .footer-bottom {
 
 .disc-jiujitsu {
   display: flex;
-  justify-content: center;
+  margin: 0 20px 0 20px;
 }
 .disc-jiujitsu img {
   width: 700px;
@@ -750,6 +750,22 @@ footer section .footer-bottom {
   padding: 20px 50px 20px 50px;
 }
 .disc-jiujitsu .disc-jiujitsuTxt div p {
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+.disc-mma {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 20px 0 20px;
+}
+.disc-mma img {
+  width: 700px;
+}
+.disc-mma .disc-mmaTxt div {
+  padding: 20px 50px 20px 50px;
+}
+.disc-mma .disc-mmaTxt div p {
   text-align: left;
   padding-bottom: 8px;
 }/*# sourceMappingURL=style.css.map */
