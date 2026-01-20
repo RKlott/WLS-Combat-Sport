@@ -1,11 +1,12 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0 2rem 0 2rem;
-  background-color: #fff;
+  padding: 1rem 2rem 1rem 2rem;
+
+  background-color: $BackBlack;
   border-bottom: 1px solid $graphite;
 
-  button{
+  button {
     display: none;
   }
 
@@ -68,9 +69,9 @@ header {
         gap: 3rem;
         list-style: none;
 
-        a{
-            color: $main-white;
-            font-weight: 800;
+        a {
+          color: $main-white;
+          font-weight: 800;
         }
       }
     }
@@ -95,8 +96,17 @@ header {
 
   .header-logo-container {
     display: flex;
+
+
     img {
+        
+      background-color: $Grey-beige;
       width: 100px;
+      border: 0.1px solid $rich-mahogany;
+      box-shadow: 0 0 10px $Grey-beige;
+      border-radius: 5px;
+      padding-left: 6px;
+    
     }
   }
 
@@ -113,6 +123,11 @@ header {
         a {
           text-decoration: none;
           text-transform: uppercase;
+          color: $oxblood !important;
+          transition: 0.5s ease;
+          &:hover {
+            color: red !important;
+          }
         }
       }
     }
