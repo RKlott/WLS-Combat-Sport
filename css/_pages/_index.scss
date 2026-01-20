@@ -9,10 +9,11 @@ header {
   padding: 0 2rem 0 2rem;
 
 
+
   @include media-max($media-portrait) {
     width: 100%;
     position: fixed;
-    border-bottom: none;
+
   }
 
   .header-logo-container {
@@ -80,7 +81,7 @@ header {
         top: 2rem;
         right: 1.3rem;
         padding: 4px;
-        border: black solid 1px;
+       
         background: white;
         cursor: pointer;
 
