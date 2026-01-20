@@ -2,13 +2,90 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 2rem 0 2rem;
-
-
+  background-color: #fff;
+  border-bottom: 1px solid $graphite;
 
   @include media-max($media-portrait) {
     width: 100%;
-   
+    position: fixed;
 
+    // style du bouton Burger
+    .burger-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+      align-self: center;
+
+      .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        transition: 0.3s;
+      }
+
+      // animation pour transformer le burger en X
+      &.active {
+        .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+
+    // menu en responsive
+    nav {
+      position: fixed;
+      top: 0;
+      right: -100%; // Caché à droite par défaut
+      width: 40%; // Largeur du menu mobile
+      height: 100vh;
+      background: $oxblood;
+      transition: 0.4s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.active {
+        right: 0; // Apparaît à l'écran
+      }
+
+      .menu {
+        flex-direction: column;
+        gap: 3rem;
+        list-style: none;
+
+        a{
+            color: $main-white;
+            font-weight: 800;
+        }
+      }
+    }
+
+    // Responsive : Cacher le burger sur Desktop
+    @media (min-width: 900px) {
+      .burger-btn {
+        display: none;
+      }
+      nav {
+        position: static;
+        height: auto;
+        width: auto;
+        right: auto;
+
+        .menu {
+          flex-direction: row;
+        }
+      }
+    }
   }
 
   .header-logo-container {
@@ -25,7 +102,6 @@ header {
       display: flex;
       gap: 3rem;
 
-
       li {
         list-style-type: none;
 
@@ -35,7 +111,6 @@ header {
         }
       }
     }
-
   }
 }
 
@@ -138,7 +213,6 @@ header {
         width: 80%;
       }
 
-
       button {
         margin-top: 2rem;
         padding: 0.5rem 2rem;
@@ -150,10 +224,10 @@ header {
         border-radius: 1rem;
         align-self: center;
         transition: 0.5s ease;
-        a{
-            color: white;
-            text-decoration: none;
-            width: 100%;
+        a {
+          color: white;
+          text-decoration: none;
+          width: 100%;
         }
 
         &:hover {
