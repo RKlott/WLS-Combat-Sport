@@ -138,22 +138,26 @@ header {
         width: 80%;
       }
 
-      a {
-        align-self: center;
-        width: fit-content;
-      }
 
       button {
         margin-top: 2rem;
         padding: 0.5rem 2rem;
+        width: 70%;
         background-color: $oxblood;
         color: rgb(255, 244, 244);
         font-weight: 700;
         border: 0.5px solid $graphite;
         border-radius: 1rem;
+        align-self: center;
+        transition: 0.5s ease;
+        a{
+            color: white;
+            text-decoration: none;
+            width: 100%;
+        }
 
         &:hover {
-          
+          background-color: rgb(95, 11, 0);
           cursor: pointer;
         }
       }
