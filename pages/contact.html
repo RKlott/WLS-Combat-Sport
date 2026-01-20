@@ -3,69 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/_pages/_contact.scss">
+    <link rel="stylesheet" href="../css/style.css">
     <title>WLS Combat Sport</title>
     <link rel="icon" type=image/svg href="../img/content/LogoWLS.png">
 </head>
 <body class="scrollbar" id="style-10">
 <!-- HEADER -->
 <!-- HEADER -->
-            <div class="rammstein-lecture">
-                <h2>Lecture préalable</h2><br>
+            <div class="contact-lecture" id="anchor">
                 <h2>
-                    Vous avez une question sur le groupe Rammstein ? Une suggestion pour améliorer Rammstein.fr ? Un problème d'utilisation ? Des fichiers à incorporer ? Des corrections à apporter ? Contactez-nous ! C'est très simple, il vous suffit de remplir le formulaire suivant. Cependant, vous devez lire les points ci-dessous avant d'utiliser le formulaire : <br><br>
-
-                    - Votre mail doit être compréhensible. Tout mail avec langage SMS ou fautes d'orthographe excessives sera supprimé. <br><br>
-                    - Un mail poli nous donne toujours envie de répondre. <br><br>
-                    - Nous ne sommes pas Rammstein, et ne pourrons pas prendre contact avec le groupe pour vous.
+                    Merci de prendre connaissance des points suivants avant toute prise de contact : <br><br>
+                    - Votre message doit être clair et compréhensible. Tout message rédigé en langage SMS ou comportant trop de fautes d’orthographe pourra ne pas être traité. <br><br>
+                    - Un message courtois facilite toujours les échanges et nous encourage à vous répondre dans les meilleurs délais. <br><br>
+                    - WLS Combat Sport est une salle de sport indépendante : nous ne pourrons pas intervenir pour des demandes extérieures ou sans lien direct avec nos activités. <br><br>
+                    - Toute faute d'orthographe entraînera inévitablement une prise de soumission. <br><br>
+                    - Au plaisir d’échanger avec vous et de vous accompagner dans votre pratique sportive 💪🥊
                 </h2>
             </div>
                 <h1>Formulaire de contact</h1>
                 <main>
                     <section>
-                    <form method="get" action=""></form>
-                        <div class="rammstein-form">
-                            <div class="form-box">
+                    <form method="get" action="">
+                        <div class="contact-form">
+                            <div class="contact-box">
                                 <p>
                                     <label for="prénom">Prénom & nom / Pseudo</label><br>
-                                    <input class="inputform" type="text" name="prénom" placeholder="" size="50" maxlength="70">
+                                    <input class="contact-inputform" type="text" name="prénom" placeholder="" size="50" maxlength="70">
                                 </p><br>
                                 <p>
                                     <label for="email">Email</label><br>
-                                    <input class="inputform" type="text" name="email" placeholder="" size="50" maxlength="70">
+                                    <input class="contact-inputform" type="text" name="email" placeholder="" size="50" maxlength="70">
                                 </p><br>
                                 <p>
                                     <label for="message">Message</label><br>
-                                    <textarea class="inputform" type="text" name="message" placeholder="" rows="20" cols="50" maxlength="70"></textarea>
+                                    <textarea class="contact-inputform" type="text" name="message" placeholder="" rows="20" cols="50" maxlength="70"></textarea>
                                 </p><br>
                             
                                 <div class="checkbox">
-                                    <p class="'toto">
+                                    <p>
                                         <input type="checkbox" name="newsletter" id="newsletter">
-                                        <label class="inputform" for="Newsletter">Vous souhaitez souscrire à nôtre newsletter</label>
+                                        <label class="contact-inputform" for="Newsletter">à cocher si vous souhaitez vous inscrire</label>
                                     </p><br>
-                                    <p class="'toto">
-                                        <label for="anti-robot">Question anti-robots : Inscrivez ici le nom de la capitale de la France</label>
+                                    <p>
+                                        <label for="anti-robot">Inscrivez ici le nom de vôtre combatant préféré</label>
                                          <input type="text" name="anti-robot" name="anti-robot" placeholder="" size="50" maxlength="70">
                                     </p>
                                 </div>
                                 <div class="envoyer">
                                     <p>Envoyer</p>
-                                    <input class="submit" type="submit" value="Emvoyer mon formulaire">
+                                    <input class="contact-input" type="submit" value="Envoyer mon formulaire" style="background-color: rgba(163, 0, 3, 1);">
                                 </div>
                             </div>
                         </div>
+                    </form>
                     </section>
                 </main>
                 <footer>
+                    <div class="footer-anchor"> 
+                    <!--ANCRE / Pour retour en haut de page ou là où je le veux, là où se trouve l'id indiqué dans href-->
+                    <a href="#anchor">Retour en haut de la page</a>
+                    </div>
                     <section>
                         <div class="footer-content">
-                            <div class="footer-logo">
+                            <div>
                             <img class="logo" src="../img/content/LogoWLS.png" alt="WLS Logo">
                             </div>
 
-                            <nav class="footer-nav">
-                            <ul class="footer-links">
+                            <nav>
+                            <ul>
                                 <li><a href="#">Mentions Légales</a></li>
                                 <li><a href="#">Confidentialité</a></li>
                                 <li><a href="link/contact.html">Contact</a></li>
