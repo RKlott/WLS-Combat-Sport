@@ -4,10 +4,154 @@ a:visited {color: $rich-mahogany;}
 a:hover {color: $Grey-beige;}
 a:active {color: $oxblood;}
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Pour inclure les marges internes et les bordures dans les marges des parents*/
+}
+
+body {
+    background-image: url(images/deutschlandnoback.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 500px;
+    background-position: center;
+    background-color: black;
+}
+
+.header1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    border-bottom: 1px solid var(--darkgold);
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(255, 217, 0, 0.329) ;
+}
+/*-------------------------PARTIE LECTURE---------------------------*/
+.wls-lecture{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgb(32, 32, 32);
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: 100px;
+        h2 {
+        color: white;
+    }
+}
+h1 {
+    color: white;
+    font-size: 8em;
+    text-align: center;
+    margin: 100px 0px 50px 0px;
+    width: 100%;
+}
+/*-------------------------FIN PARTIE LECTURE---------------------------*/
+/*--------------------------PARTIE CONTACT----------------------------*/
+
+.rammstein-form {
+    color: antiquewhite;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgb(32, 32, 32);
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.inputform {
+    padding: 5px;
+    margin-top: 10px;
+}
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%
+} 
+.envoyer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.submit {
+    padding: 5px;
+    margin-top: 10px;
+}
+/*--------------------------FIN PARTIE CONTACT----------------------------*/
+
+/*-----------------------------MEDIA QUERY---------------------------------*/
+/*On peut ecrire min-width ou max-width personnellement je prefere le max*/
+  /*EXEMPLE*/
+  /*Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px 
+        @media screen and (max-width: 1280px)
+    Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px 
+        @media all and (min-width: 1024px) and (max-width: 1280px)
+    Sur tous types d'écrans orientés verticalement 
+        @media all and (orientation: portrait)
+        REGARDER le overflow : scroll ,pour un texte qui dépasse de sa boite parent*/
+@media screen and (max-width: 800px) {
+    .header1 {
+        display: none;
+    }
+    .menu-burger {
+        display: block;
+    }
+    .images1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    gap: 20%;
+    }
+    .imgsection1 {
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+    transform: scaleX(-1);
+    box-shadow: 5px 10px 50px rgba(178, 34, 34, 0.164);
+    }
+    .imgsection2 {
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+    box-shadow: 5px 10px 50px rgba(178, 34, 34, 0.164);
+    }
+    .txtbox {
+    font-size: 23px;
+    }
+    .vidéo {
+        width: 100%;
+    }
+    .rammstein-form {
+        margin-bottom: 20px;
+    }
+    .rammstein-lecture {
+    margin-top: 200px;
+    }
+}
+
+
+/*----------------------------FOOTER-----------------------------*/
 footer {
     background-color: $BackBlack;
     padding: 10px 0 0 0;
     width: 100%;
+/*----------------------------ANCHOR-----------------------------*/
     .footer-anchor{
         display: flex;
         justify-content: center;
@@ -27,6 +171,7 @@ footer {
         }
         }
         section{
+/*----------------------------FIN ANCHOR-----------------------------*/
             .footer-content{
                 display: flex;
                 justify-content: space-between;
@@ -75,3 +220,4 @@ footer {
             }
         }
     }
+/*----------------------------FIN FOOTER-----------------------------*/
