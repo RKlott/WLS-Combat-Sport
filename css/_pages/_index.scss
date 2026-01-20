@@ -53,6 +53,7 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      border-left: 2px solid rgb(2, 2, 2);
 
       &.active {
         right: 0; // Apparaît à l'écran
