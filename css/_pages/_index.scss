@@ -1,4 +1,5 @@
-.showMenu { //?Utilisé en js pour faire descendre le menu
+.showMenu {
+  //?Utilisé en js pour faire descendre le menu
   transform: translateY(0);
 }
 
@@ -6,12 +7,12 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 2rem 0 2rem;
-  border-bottom: solid 1px black;
 
-  @include media-max($media-portrait){
+
+  @include media-max($media-portrait) {
     width: 100%;
     position: fixed;
-
+    border-bottom: none;
   }
 
   .header-logo-container {
@@ -28,7 +29,8 @@ header {
       display: flex;
       gap: 3rem;
 
-      @include media-max($media-portrait) { //?ajout du menu burger en version tablette/mobile et parametrage
+      @include media-max($media-portrait) {
+        //?ajout du menu burger en version tablette/mobile et parametrage
         flex-direction: column;
         margin: 0;
         position: fixed;
@@ -67,7 +69,8 @@ header {
       }
     }
 
-    .hamburger { //?ajout du menu burger en version tablette/mobile et parametrage
+    .hamburger {
+      //?ajout du menu burger en version tablette/mobile et parametrage
       display: none;
 
       @include media-max($media-portrait) {
@@ -180,12 +183,21 @@ header {
     .txt-container {
       width: 50%;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
 
       @include media-max($media-portrait) {
         width: 80%;
       }
 
+      a {
+        align-self: center;
+        width: fit-content;
+      }
+
       button {
+        margin-top: 2rem;
         padding: 0.5rem 2rem;
         background-color: $oxblood;
         color: rgb(255, 244, 244);
@@ -193,8 +205,9 @@ header {
         border: 0.5px solid $graphite;
         border-radius: 1rem;
 
-        &:hover{
-            background-color: lighten($color: $oxblood, $amount: 10%);
+        &:hover {
+          
+          cursor: pointer;
         }
       }
     }
