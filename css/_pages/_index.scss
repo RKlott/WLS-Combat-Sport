@@ -2,6 +2,7 @@ main{
     height: 400px;
     width: 150px;
     background-color: black;
+    
 header { 
     .logo {
         display: flex;
@@ -11,6 +12,8 @@ header {
     .NavBarLink {
         display: flex;
         justify-content: space-around;
+
+    }
 
     }
 }
