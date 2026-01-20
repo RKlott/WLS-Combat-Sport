@@ -306,4 +306,10 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+main {
+  height: 400px;
+  width: 150px;
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */
