@@ -314,6 +314,7 @@ main {
   flex-direction: column;
   margin: 0 auto;
   max-width: 1440px;
+  padding: 0 2rem 0 2rem;
 }
 
 /* SCSS RGB */
@@ -333,14 +334,89 @@ main {
   transform: translateX(-50%);
 }
 
-header .logo {
-  display: flex;
-  justify-content: left;
-  width: 200px;
+.showMenu {
+  transform: translateY(0);
 }
-header .NavBarLink {
+
+header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+  border-bottom: solid 1px black;
+}
+@media screen and (max-width: 900px) {
+  header {
+    width: 100%;
+    position: fixed;
+  }
+}
+header .header-logo-container {
+  display: flex;
+}
+header .header-logo-container img {
+  width: 100px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  gap: 3rem;
+}
+@media screen and (max-width: 900px) {
+  header nav ul {
+    flex-direction: column;
+    margin: 0;
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgb(0, 0, 0);
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+  }
+  header nav ul .menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: none;
+  }
+  header nav ul .menuItem:hover {
+    text-decoration: underline;
+  }
+}
+header nav ul li {
+  list-style-type: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header nav .hamburger {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  header nav .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    top: 2rem;
+    right: 1.3rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+  }
+  header nav .hamburger .closeIcon {
+    display: none;
+  }
 }
 
 .index-main .main-section {
@@ -356,8 +432,20 @@ header .NavBarLink {
   margin-top: 10%;
   gap: 10%;
 }
+@media screen and (max-width: 900px) {
+  .index-main .martial_arts-section {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
 .index-main .martial_arts-section div {
   text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .index-main .martial_arts-section div p {
+    width: 60%;
+    justify-self: center;
+  }
 }
 .index-main .martial_arts-section div img {
   width: 70%;
@@ -370,9 +458,19 @@ header .NavBarLink {
   margin-bottom: 10%;
   justify-content: space-between;
 }
+@media screen and (max-width: 900px) {
+  .index-main .team-qualities {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 12%;
+    margin-bottom: 8%;
+  }
+}
 .index-main .team-qualities div {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .index-main .team-qualities div img {
   width: 150px;
@@ -383,9 +481,21 @@ header .NavBarLink {
   gap: 3rem;
   margin-bottom: 8rem;
 }
+@media screen and (max-width: 900px) {
+  .index-main .discover-us {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+}
 .index-main .discover-us .img-container {
   display: flex;
   width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .index-main .discover-us .img-container {
+    width: 90%;
+  }
 }
 .index-main .discover-us .img-container img {
   -o-object-fit: cover;
@@ -395,6 +505,11 @@ header .NavBarLink {
 .index-main .discover-us .txt-container {
   width: 50%;
   text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .index-main .discover-us .txt-container {
+    width: 80%;
+  }
 }
 .index-main .discover-us .txt-container button {
   padding: 0.5rem 2rem;
