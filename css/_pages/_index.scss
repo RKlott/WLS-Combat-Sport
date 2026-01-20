@@ -1,17 +1,92 @@
-.showMenu { //?Utilisé en js pour faire descendre le menu
-  transform: translateY(0);
-}
-
 header {
   display: flex;
   justify-content: space-between;
   padding: 0 2rem 0 2rem;
-  border-bottom: solid 1px black;
+  background-color: #fff;
+  border-bottom: 1px solid $graphite;
 
-  @include media-max($media-portrait){
+  @include media-max($media-portrait) {
     width: 100%;
     position: fixed;
 
+    // style du bouton Burger
+    .burger-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+      align-self: center;
+
+      .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        transition: 0.3s;
+      }
+
+      // animation pour transformer le burger en X
+      &.active {
+        .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+
+    // menu en responsive
+    nav {
+      position: fixed;
+      top: 0;
+      right: -100%; // Caché à droite par défaut
+      width: 40%; // Largeur du menu mobile
+      height: 100vh;
+      background: $oxblood;
+      transition: 0.4s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 2px solid rgb(2, 2, 2);
+
+      &.active {
+        right: 0; // Apparaît à l'écran
+      }
+
+      .menu {
+        flex-direction: column;
+        gap: 3rem;
+        list-style: none;
+
+        a{
+            color: $main-white;
+            font-weight: 800;
+        }
+      }
+    }
+
+    // Responsive : Cacher le burger sur Desktop
+    @media (min-width: 900px) {
+      .burger-btn {
+        display: none;
+      }
+      nav {
+        position: static;
+        height: auto;
+        width: auto;
+        right: auto;
+
+        .menu {
+          flex-direction: row;
+        }
+      }
+    }
   }
 
   .header-logo-container {
@@ -28,61 +103,12 @@ header {
       display: flex;
       gap: 3rem;
 
-      @include media-max($media-portrait) { //?ajout du menu burger en version tablette/mobile et parametrage
-        flex-direction: column;
-        margin: 0;
-        position: fixed;
-        transform: translateY(-100%);
-        transition: transform 0.2s;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 99;
-        background: rgb(0, 0, 0);
-        color: white;
-        list-style: none;
-        padding-top: 4rem;
-
-        .menuItem {
-          display: block;
-          margin: 2rem 4rem;
-          font-size: 1.4rem;
-          color: white;
-          text-decoration: none;
-        }
-
-        .menuItem:hover {
-          text-decoration: underline;
-        }
-      }
-
       li {
         list-style-type: none;
 
         a {
           text-decoration: none;
           text-transform: uppercase;
-        }
-      }
-    }
-
-    .hamburger { //?ajout du menu burger en version tablette/mobile et parametrage
-      display: none;
-
-      @include media-max($media-portrait) {
-        display: block;
-        position: fixed;
-        z-index: 100;
-        top: 2rem;
-        right: 1.3rem;
-        padding: 4px;
-        border: black solid 1px;
-        background: white;
-        cursor: pointer;
-
-        .closeIcon {
-          display: none;
         }
       }
     }
@@ -180,21 +206,34 @@ header {
     .txt-container {
       width: 50%;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
 
       @include media-max($media-portrait) {
         width: 80%;
       }
 
       button {
+        margin-top: 2rem;
         padding: 0.5rem 2rem;
+        width: 70%;
         background-color: $oxblood;
         color: rgb(255, 244, 244);
         font-weight: 700;
         border: 0.5px solid $graphite;
         border-radius: 1rem;
+        align-self: center;
+        transition: 0.5s ease;
+        a {
+          color: white;
+          text-decoration: none;
+          width: 100%;
+        }
 
-        &:hover{
-            background-color: lighten($color: $oxblood, $amount: 10%);
+        &:hover {
+          background-color: rgb(95, 11, 0);
+          cursor: pointer;
         }
       }
     }

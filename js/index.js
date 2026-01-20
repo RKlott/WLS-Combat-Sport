@@ -1,25 +1,17 @@
-const menu = document.querySelector(".menu");
-const menuItems = document.querySelectorAll(".menuItem");
-const hamburger= document.querySelector(".hamburger");
-const closeIcon= document.querySelector(".closeIcon");
-const menuIcon = document.querySelector(".menuIcon");
+// variables pour target les éléments html sur lesquels intéragir
+const burgerBtn = document.getElementById('burgerBtn');
+const navMenu = document.getElementById('navMenu');
 
-function toggleMenu() {
-  if (menu.classList.contains("showMenu")) {
-    menu.classList.remove("showMenu");
-    closeIcon.style.display = "none";
-    menuIcon.style.display = "block";
-  } else {
-    menu.classList.add("showMenu");
-    closeIcon.style.display = "block";
-    menuIcon.style.display = "none";
-  }
-}
+burgerBtn.addEventListener('click', () => {
+    // ajoute la classe 'active' sur le bouton et le menu
+    burgerBtn.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
 
-hamburger.addEventListener("click", toggleMenu);
-
-menuItems.forEach( 
-  function(menuItem) { 
-    menuItem.addEventListener("click", toggleMenu);
-  }
-)
+// ferme le menu si on clique sur un lien
+document.querySelectorAll('.menuItem').forEach(link => {
+    link.addEventListener('click', () => {
+        burgerBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
