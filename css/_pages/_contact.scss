@@ -10,9 +10,6 @@ a:active {color: $oxblood;}
     box-sizing: border-box; /* Pour inclure les marges internes et les bordures dans les marges des parents*/
 }
 
-body {
-    background-color: white;
-}
 /*----------------------HEADER-----------------------*/
 header {
   display: flex;
@@ -252,11 +249,12 @@ footer {
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: wrap;
+                padding: 0 2rem 0 2rem;
             
                 .logo{
                     background-color: $Grey-beige;
-                    width: 10em;
-                    margin: 0 0 20px 20px;
+                    width: 100px;
+                    margin-bottom: 2rem;
                     border: 0.1px solid $rich-mahogany;
                     box-shadow: 0 0 10px $Grey-beige;
                     border-radius: 5px;
