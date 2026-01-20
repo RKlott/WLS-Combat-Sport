@@ -11,6 +11,7 @@ header {
   @include media-max($media-portrait){
     width: 100%;
     position: fixed;
+
   }
 
   .header-logo-container {
@@ -186,6 +187,15 @@ header {
 
       button {
         padding: 0.5rem 2rem;
+        background-color: $oxblood;
+        color: rgb(255, 244, 244);
+        font-weight: 700;
+        border: 0.5px solid $graphite;
+        border-radius: 1rem;
+
+        &:hover{
+            background-color: lighten($color: $oxblood, $amount: 10%);
+        }
       }
     }
   }
