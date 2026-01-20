@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>WLS Combat Sport</title>
+    <title>WLS Combat Sport - Contact</title>
     <link rel="icon" type=image/svg href="../img/content/LogoWLS.png">
 </head>
 <body class="contact-body" id="style-10">
-    <header>
-        <div class="header-logo-container">
-            <img src="../img/content/LogoWLS.png" alt="logo-du-site">
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a class="menuItem" href="./index.html">Accueil</a></li>
-                <li><a class="menuItem" href="./pages/disciplines.html">Disciplines</a></li>
-                <li><a class="menuItem" href="./pages/contact.html">Contact</a></li>
-            </ul>
-            <button class="hamburger">
-                <i class="menuIcon material-icons">menu</i>
-                <i class="closeIcon material-icons">close</i>
-            </button>
-        </nav>
-    </header>
+    <header> <!--TODO: Commencer à copier pour les autres pages d'ici-->
+      <div class="header-logo-container">
+        <img src="../img/content/LogoWLS.png" alt="logo-du-site" />
+      </div>
+
+      <button class="burger-btn" id="burgerBtn" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav id="navMenu">
+        <ul class="menu">
+          <li><a class="menuItem" href="../index.html">Accueil</a></li>
+          <li><a class="menuItem" href="../pages/disciplines.html">Disciplines</a></li>
+          <li><a class="menuItem" href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header> <!--TODO: à ici-->
             <div class="contact-lecture" id="anchor">
                 <h2>
                     Merci de prendre connaissance des points suivants avant toute prise de contact : <br><br>
@@ -42,25 +45,25 @@
                             <div class="contact-box">
                                 <p>
                                     <label for="prénom">Prénom & nom / Pseudo</label><br>
-                                    <input class="contact-inputform" type="text" name="prénom" placeholder="" size="50" maxlength="70">
+                                    <input style="background-color: #fff;" class="contact-inputform" type="text" name="prénom" placeholder="" size="50" maxlength="70">
                                 </p><br>
                                 <p>
                                     <label for="email">Email</label><br>
-                                    <input class="contact-inputform" type="text" name="email" placeholder="" size="50" maxlength="70">
+                                    <input style="background-color: #fff;" class="contact-inputform" type="text" name="email" placeholder="" size="50" maxlength="70">
                                 </p><br>
                                 <p>
                                     <label for="message">Message</label><br>
-                                    <textarea class="contact-inputform" type="text" name="message" placeholder="" rows="20" cols="50" maxlength="70"></textarea>
+                                    <textarea style="background-color: #fff;" class="contact-inputform" type="text" name="message" placeholder="" rows="20" cols="50" maxlength="70"></textarea>
                                 </p><br>
                             
                                 <div class="checkbox">
                                     <p>
-                                        <input type="checkbox" name="newsletter" id="newsletter">
+                                        <input style="background-color: #fff;" type="checkbox" name="newsletter" id="newsletter">
                                         <label class="contact-inputform" for="Newsletter">à cocher si vous souhaitez vous inscrire</label>
                                     </p><br>
                                     <p>
                                         <label for="anti-robot">Inscrivez ici le nom de vôtre combatant préféré</label>
-                                         <input type="text" name="anti-robot" name="anti-robot" placeholder="" size="50" maxlength="70">
+                                         <input style="background-color: #fff;" type="text" name="anti-robot" name="anti-robot" placeholder="" size="50" maxlength="70">
                                     </p>
                                 </div>
                                 <div class="envoyer">

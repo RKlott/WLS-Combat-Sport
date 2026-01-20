@@ -731,4 +731,54 @@ footer section .footer-bottom {
   justify-content: center;
 }
 
-/*----------------------------FIN FOOTER-----------------------------*//*# sourceMappingURL=style.css.map */
+/*----------------------------FIN FOOTER-----------------------------*/
+#disc-main {
+  max-width: none;
+  padding: 0;
+}
+#disc-main h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 8em;
+}
+
+.discipline-imgAccueil {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(5, 6, 9);
+}
+.discipline-imgAccueil img {
+  width: 50%;
+}
+
+.disc-jiujitsu {
+  display: flex;
+  margin: 0 20px 0 20px;
+}
+.disc-jiujitsu img {
+  width: 700px;
+}
+.disc-jiujitsu .disc-jiujitsuTxt div {
+  padding: 20px 50px 20px 50px;
+}
+.disc-jiujitsu .disc-jiujitsuTxt div p {
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+.disc-mma {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 20px 0 20px;
+}
+.disc-mma img {
+  width: 700px;
+}
+.disc-mma .disc-mmaTxt div {
+  padding: 20px 50px 20px 50px;
+}
+.disc-mma .disc-mmaTxt div p {
+  text-align: left;
+  padding-bottom: 8px;
+}/*# sourceMappingURL=style.css.map */
