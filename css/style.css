@@ -309,6 +309,13 @@ template {
   display: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
 /* SCSS RGB */
 .underline-effect {
   display: inline-block;
@@ -334,6 +341,63 @@ header .logo {
 header .NavBarLink {
   display: flex;
   justify-content: space-around;
+}
+
+.index-main .main-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 70%;
+  align-items: center;
+  text-align: center;
+}
+.index-main .martial_arts-section {
+  display: flex;
+  margin-top: 10%;
+  gap: 10%;
+}
+.index-main .martial_arts-section div {
+  text-align: center;
+}
+.index-main .martial_arts-section div img {
+  width: 70%;
+}
+.index-main .team-qualities {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  justify-content: space-between;
+}
+.index-main .team-qualities div {
+  display: flex;
+  flex-direction: column;
+}
+.index-main .team-qualities div img {
+  width: 150px;
+}
+.index-main .discover-us {
+  display: flex;
+  height: 70vh;
+  gap: 3rem;
+  margin-bottom: 8rem;
+}
+.index-main .discover-us .img-container {
+  display: flex;
+  width: 50%;
+}
+.index-main .discover-us .img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+.index-main .discover-us .txt-container {
+  width: 50%;
+  text-align: center;
+}
+.index-main .discover-us .txt-container button {
+  padding: 0.5rem 2rem;
 }
 
 /*Charte graphique liens*/
@@ -393,6 +457,7 @@ body {
   color: white;
 }
 
+/*-------------------------FIN PARTIE LECTURE---------------------------*/
 h1 {
   color: white;
   font-size: 8em;
@@ -401,7 +466,6 @@ h1 {
   width: 100%;
 }
 
-/*-------------------------FIN PARTIE LECTURE---------------------------*/
 /*--------------------------PARTIE CONTACT----------------------------*/
 .rammstein-form {
   color: antiquewhite;

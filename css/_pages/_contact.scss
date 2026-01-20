@@ -29,7 +29,7 @@ body {
     box-shadow: 0 0 100px rgba(255, 217, 0, 0.329) ;
 }
 /*-------------------------PARTIE LECTURE---------------------------*/
-.wls-lecture{
+.contact-lecture{
     max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
@@ -42,6 +42,7 @@ body {
         color: white;
     }
 }
+/*-------------------------FIN PARTIE LECTURE---------------------------*/
 h1 {
     color: white;
     font-size: 8em;
@@ -49,7 +50,6 @@ h1 {
     margin: 100px 0px 50px 0px;
     width: 100%;
 }
-/*-------------------------FIN PARTIE LECTURE---------------------------*/
 /*--------------------------PARTIE CONTACT----------------------------*/
 
 .rammstein-form {
@@ -65,13 +65,14 @@ h1 {
     text-align: left;
     margin-top: 100px;
     margin-bottom: 100px;
+        .form-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
 }
-.form-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
+
 .inputform {
     padding: 5px;
     margin-top: 10px;
