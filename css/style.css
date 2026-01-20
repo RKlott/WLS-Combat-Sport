@@ -555,98 +555,11 @@ a:active {
   box-sizing: border-box; /* Pour inclure les marges internes et les bordures dans les marges des parents*/
 }
 
-body {
-  background-color: white;
-}
-
-/*----------------------HEADER-----------------------*/
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2rem 0 2rem;
-  border-bottom: solid 1px black;
-}
-@media screen and (max-width: 900px) {
-  header {
-    width: 100%;
-    position: fixed;
-  }
-}
-header .header-logo-container {
-  display: flex;
-}
-header .header-logo-container img {
-  width: 100px;
-}
-header nav {
-  display: flex;
-  align-items: center;
-}
-header nav ul {
-  display: flex;
-  gap: 3rem;
-}
-@media screen and (max-width: 900px) {
-  header nav ul {
-    flex-direction: column;
-    margin: 0;
-    position: fixed;
-    transform: translateY(-100%);
-    transition: transform 0.2s;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99;
-    background: rgb(0, 0, 0);
-    color: white;
-    list-style: none;
-    padding-top: 4rem;
-  }
-  header nav ul .menuItem {
-    display: block;
-    margin: 2rem 4rem;
-    font-size: 1.4rem;
-    color: white;
-    text-decoration: none;
-  }
-  header nav ul .menuItem:hover {
-    text-decoration: underline;
-  }
-}
-header nav ul li {
-  list-style-type: none;
-}
-header nav ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-}
-header nav .hamburger {
-  display: none;
-}
-@media screen and (max-width: 900px) {
-  header nav .hamburger {
-    display: block;
-    position: fixed;
-    z-index: 100;
-    top: 2rem;
-    right: 1.3rem;
-    padding: 4px;
-    border: black solid 1px;
-    background: white;
-    cursor: pointer;
-  }
-  header nav .hamburger .closeIcon {
-    display: none;
-  }
-}
-
-/*----------------------FIN HEADER-----------------------*/
 /*-------------------------PARTIE LECTURE---------------------------*/
 .contact-lecture {
-  max-width: 1300px;
+  max-width: 1650px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 10% 20px 10%;
   background: rgb(51, 51, 51);
   border-radius: 8px;
   text-align: left;
@@ -654,12 +567,12 @@ header nav .hamburger {
   margin-bottom: 100px;
 }
 .contact-lecture h2 {
-  color: white;
+  color: #fff;
 }
 
 /*-------------------------FIN PARTIE LECTURE---------------------------*/
 .contact-h1 {
-  color: white;
+  color: rgb(5, 6, 9);
   font-size: 8em;
   text-align: center;
   margin: 100px 0px 50px 0px;
@@ -668,7 +581,7 @@ header nav .hamburger {
 
 /*--------------------------PARTIE CONTACT----------------------------*/
 .contact-form {
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -705,62 +618,13 @@ header nav .hamburger {
   flex-direction: column;
 }
 .contact-form .contact-box .envoyer .contact-input {
-  color: white;
+  color: #fff;
   padding: 5px;
   margin-top: 10px;
   border-radius: 7px;
 }
 
 /*--------------------------FIN PARTIE CONTACT----------------------------*/
-/*-----------------------------MEDIA QUERY---------------------------------*/
-/*On peut ecrire min-width ou max-width personnellement je prefere le max*/
-/*EXEMPLE*/
-/*Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px 
-      @media screen and (max-width: 1280px)
-  Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px 
-      @media all and (min-width: 1024px) and (max-width: 1280px)
-  Sur tous types d'écrans orientés verticalement 
-      @media all and (orientation: portrait)
-      REGARDER le overflow : scroll ,pour un texte qui dépasse de sa boite parent*/
-@media screen and (max-width: 800px) {
-  .header1 {
-    display: none;
-  }
-  .menu-burger {
-    display: block;
-  }
-  .images1 {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 200px;
-    gap: 20%;
-  }
-  .imgsection1 {
-    width: 30%;
-    height: 30%;
-    border-radius: 20px;
-    transform: scaleX(-1);
-    box-shadow: 5px 10px 50px rgba(178, 34, 34, 0.164);
-  }
-  .imgsection2 {
-    width: 30%;
-    height: 30%;
-    border-radius: 20px;
-    box-shadow: 5px 10px 50px rgba(178, 34, 34, 0.164);
-  }
-  .txtbox {
-    font-size: 23px;
-  }
-  .vidéo {
-    width: 100%;
-  }
-  .rammstein-form {
-    margin-bottom: 20px;
-  }
-  .rammstein-lecture {
-    margin-top: 200px;
-  }
-}
 /*----------------------------FOOTER-----------------------------*/
 footer {
   background-color: rgb(5, 6, 9);
@@ -774,8 +638,7 @@ footer .footer-anchor {
 }
 footer .footer-anchor a {
   display: inline-block;
-  background-color: rgb(5, 6, 9);
-  color: white;
+  color: #fff;
   padding: 7px 70px 7px 70px;
   text-decoration: none;
   font-weight: bolder;
@@ -794,14 +657,16 @@ footer section .footer-content {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding: 0 2rem 0 2rem;
 }
 footer section .footer-content .logo {
   background-color: rgb(169, 159, 150);
-  width: 10em;
-  margin: 0 0 20px 20px;
+  width: 100px;
+  margin-bottom: 2rem;
   border: 0.1px solid rgb(60, 0, 0);
   box-shadow: 0 0 10px rgb(169, 159, 150);
   border-radius: 5px;
+  padding-left: 6px;
 }
 footer section .footer-content ul {
   display: flex;
