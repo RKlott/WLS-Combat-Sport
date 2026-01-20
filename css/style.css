@@ -314,6 +314,7 @@ main {
   flex-direction: column;
   margin: 0 auto;
   max-width: 1440px;
+  padding: 0 2rem 0 2rem;
 }
 
 /* SCSS RGB */
@@ -333,14 +334,32 @@ main {
   transform: translateX(-50%);
 }
 
-header .logo {
+header {
   display: flex;
-  justify-content: left;
-  width: 200px;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+  border-bottom: solid 1px black;
 }
-header .NavBarLink {
+header .header-logo-container {
   display: flex;
-  justify-content: space-around;
+}
+header .header-logo-container img {
+  width: 100px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  gap: 3rem;
+}
+header nav ul li {
+  list-style-type: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .index-main .main-section {
@@ -356,8 +375,20 @@ header .NavBarLink {
   margin-top: 10%;
   gap: 10%;
 }
+@media screen and (max-width: 900px) {
+  .index-main .martial_arts-section {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
 .index-main .martial_arts-section div {
   text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .index-main .martial_arts-section div p {
+    width: 60%;
+    justify-self: center;
+  }
 }
 .index-main .martial_arts-section div img {
   width: 70%;
@@ -370,9 +401,19 @@ header .NavBarLink {
   margin-bottom: 10%;
   justify-content: space-between;
 }
+@media screen and (max-width: 900px) {
+  .index-main .team-qualities {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 12%;
+    margin-bottom: 8%;
+  }
+}
 .index-main .team-qualities div {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .index-main .team-qualities div img {
   width: 150px;
@@ -383,9 +424,21 @@ header .NavBarLink {
   gap: 3rem;
   margin-bottom: 8rem;
 }
+@media screen and (max-width: 900px) {
+  .index-main .discover-us {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+}
 .index-main .discover-us .img-container {
   display: flex;
   width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .index-main .discover-us .img-container {
+    width: 90%;
+  }
 }
 .index-main .discover-us .img-container img {
   -o-object-fit: cover;
@@ -395,6 +448,11 @@ header .NavBarLink {
 .index-main .discover-us .txt-container {
   width: 50%;
   text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .index-main .discover-us .txt-container {
+    width: 80%;
+  }
 }
 .index-main .discover-us .txt-container button {
   padding: 0.5rem 2rem;
