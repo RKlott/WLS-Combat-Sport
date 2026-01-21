@@ -79,6 +79,29 @@ a:active {color: $oxblood;}
 }
 /*--------------------------FIN PARTIE CONTACT----------------------------*/
 
+@media screen and (max-width: 900px) {
+    .contact-lecture{
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 20px 10% 20px 10%;
+    background: $graphite;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: 100px;
+        h2 {
+            font-size: 20px;
+        color: $main-white;
+    }
+    }
+    .contact-h1 {
+    color: $BackBlack;
+    font-size: 6em;
+    text-align: center;
+    margin: 100px 0px 0px 0px;
+    width: 100%;
+}
+}
 /*----------------------------FOOTER-----------------------------*/
 footer {
     background-color: $BackBlack;
