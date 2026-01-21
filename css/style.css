@@ -574,7 +574,7 @@ a:visited {
 }
 
 a:hover {
-  color: rgb(169, 159, 150);
+  color: red;
 }
 
 a:active {
@@ -641,19 +641,23 @@ a:active {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 75%;
 }
-.contact-form .contact-box .envoyer {
+.contact-form .envoyer {
   margin-top: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.contact-form .contact-box .envoyer .contact-input {
+.contact-form .envoyer .contact-input {
   color: #fff;
   padding: 5px;
   margin-top: 10px;
   border-radius: 7px;
+}
+.contact-form .envoyer .contact-input:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
 }
 
 /*--------------------------FIN PARTIE CONTACT----------------------------*/
@@ -723,17 +727,38 @@ footer section .footer-content .logo {
   border-radius: 5px;
   padding-left: 6px;
 }
+footer section .footer-content nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 footer section .footer-content ul {
   display: flex;
   justify-content: center;
   grid-gap: 30px;
-  padding-inline-start: 0;
+}
+@media (max-width: 700px) {
+  footer section .footer-content ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 footer section .footer-content ul li {
   list-style-type: none;
 }
 footer section .footer-content ul li a {
   text-decoration: none;
+  transition: 0.5s ease;
+}
+@media (max-width: 900px) {
+  footer section .footer-content ul li {
+    margin-right: -10px;
+  }
+}
+@media (max-width: 700px) {
+  footer section .footer-content ul li {
+    margin: -10px 0 -10px 0;
+  }
 }
 footer section .footer-content .footer-socials {
   display: flex;
@@ -741,11 +766,30 @@ footer section .footer-content .footer-socials {
   margin-right: 50px;
   /*Important pour le transform*/
 }
+@media (max-width: 1200px) {
+  footer section .footer-content .footer-socials {
+    gap: 25px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 900px) {
+  footer section .footer-content .footer-socials {
+    gap: 15px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 750px) {
+  footer section .footer-content .footer-socials {
+    gap: 10px;
+    margin-right: 10px;
+  }
+}
 footer section .footer-content .footer-socials .groslogo {
   display: inline-block;
 }
 footer section .footer-content .footer-socials .groslogo:hover {
   transform: scale(1.7);
+  transition: 0.3s ease;
 }
 footer section .footer-bottom {
   background-color: rgb(51, 51, 51);
