@@ -726,7 +726,11 @@ footer section .footer-content {
   flex-wrap: wrap;
   padding: 0 2rem 0 2rem;
 }
-footer section .footer-content .logo {
+footer section .footer-content .contactAnimLogo {
+  cursor: pointer;
+  display: inline-block;
+}
+footer section .footer-content .contactAnimLogo img {
   background-color: rgb(169, 159, 150);
   width: 100px;
   margin-bottom: 2rem;
@@ -734,6 +738,10 @@ footer section .footer-content .logo {
   box-shadow: 0 0 10px rgb(169, 159, 150);
   border-radius: 5px;
   padding-left: 6px;
+  transition: transform 0.3s ease;
+}
+footer section .footer-content .contactAnimLogo img:hover {
+  transform: scale(1.1);
 }
 footer section .footer-content nav {
   position: absolute;

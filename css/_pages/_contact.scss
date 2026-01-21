@@ -135,14 +135,24 @@ footer {
                 align-items: center;
                 flex-wrap: wrap;
                 padding: 0 2rem 0 2rem;
-                .logo{
-                    background-color: $Grey-beige;
-                    width: 100px;
-                    margin-bottom: 2rem;
-                    border: 0.1px solid $rich-mahogany;
-                    box-shadow: 0 0 10px $Grey-beige;
-                    border-radius: 5px;
-                    padding-left: 6px;
+                .contactAnimLogo {
+                    cursor: pointer;
+                    display: inline-block;
+
+                    img {
+                        background-color: $Grey-beige;
+                        width: 100px;
+                        margin-bottom: 2rem;
+                        border: 0.1px solid $rich-mahogany;
+                        box-shadow: 0 0 10px $Grey-beige;
+                        border-radius: 5px;
+                        padding-left: 6px;
+                        transition: transform 0.3s ease; 
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
                 }
                 nav{
                     position: absolute;
