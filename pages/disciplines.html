@@ -4,113 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>WLS Combat Sport - Discipline</title>
-    <link rel="icon" type=image/svg href="../img/content/LogoWLS.png">
+    <title>WLS Combat Sport - Nos Disciplines</title>
+    <link rel="icon" type="image/svg" href="../img/content/LogoWLS.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header> <!--TODO: Commencer à copier pour les autres pages d'ici-->
-      <div class="header-logo-container">
-        <img src="../img/content/LogoWLS.png" alt="logo-du-site" />
-      </div>
 
-      <button class="burger-btn" id="burgerBtn" aria-label="Menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+<header class="header">
+    <div class="header__container">
+        <div class="header__logo">
+            <img src="../img/content/LogoWLS.png" alt="WLS Logo">
+        </div>
 
-      <nav id="navMenu">
-        <ul class="menu">
-          <li><a class="menuItem" href="../index.html">Accueil</a></li>
-          <li><a class="menuItem" href="../pages/disciplines.html">Disciplines</a></li>
-          <li><a class="menuItem" href="../pages/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header> <!--TODO: à ici-->
+        <button class="burger-btn" id="burgerBtn" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-    <main id="disc-main">
-        <section>
-            <div class="discipline-imgAccueil">
-              <img src="../img/content/suplex.png" alt="fire">
-            </div>
-        </section>
-        <section>
-            <H1>Votre salle de sport WLS</H1>
-            <div class="disc-jiujitsu">
-                <div>
-                    <img src="https://le-cdn.website-editor.net/s/1585872c5b824aff8bd0d2717d21eb6b/dms3rep/multi/opt/IMG_9436-1920w.JPG?Expires=1770763525&Signature=d~LG8W9yUjHgKgJYUi37jJts2FDKLPqhtGvqlwlWB5mF5AzELpkFb0erobRE499rdL6wSqG12CgOaK-LBGo4YYOPsn0esTnJoilcyAiIbF7785BfbMSe6DIupkw1KL8qUWGN2zCBq8JEUOYOAe4CEfHb6JpCJxYmBaNcr0rjUjZ7~xS-UUP93PgF0Vm0R0rZ1x9c7C566dos3mdHtwBHmFzKM0qVDsPhAVP6SKyLOTNdtotlO1EDBtk8tAvku0SvyVYmidx~-RlE4E-KgtObJaY3F4NuxYHrohIttSQB4pPGkfG4CDD5PH0a-T8af8ARMKoRt5mdppB3n~wcdJn7xw__&Key-Pair-Id=K2NXBXLF010TJW" alt="Jiu-Jitsu">
-                </div>
-                <div class="disc-jiujitsuTxt">
-                    <div>
-                        <h2>Le Jiu-Jitsu chez WLS Combat Sport : Qu'est-ce que c'est ?</h2><br>
-                        <p><strong>Le Jiu-Jitsu</strong> (ou Jujitsu) enseigné chez <strong>WLS Combat Sport</strong> est l’art martial originel des samouraïs. Contrairement à sa version exclusivement focalisée sur le sol, notre pratique est un système de défense complet qui intègre toutes les distances du combat.</p>
+        <nav class="nav" id="navMenu">
+            <ul class="nav__list">
+                <li><a class="nav__link" href="../index.html">Accueil</a></li>
+                <li><a class="nav__link nav__link--active" href="../pages/disciplines.html">Disciplines</a></li>
+                <li><a class="nav__link" href="../pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-                        <p><strong>Une discipline complète</strong></p>
-                        <p>Pratiqué traditionnellement en Kimono (Gi), le Jiu-Jitsu combine plusieurs dimensions techniques pour une efficacité totale :</p>
+<main id="anchor">
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Nos Disciplines</h1>
+            <p>L'excellence des arts martiaux chez WLS Combat Sport</p>
+        </div>
+        <img src="../img/content/suplex.png" alt="Combat Scene" class="hero-img">
+    </section>
 
-                        <p><strong>Atemi-Waza :</strong> Techniques de frappes (pieds, poings, coudes, genoux).</p>
-
-                        <p><strong>Nage-Waza :</strong> Techniques de projections pour amener l'adversaire au sol.</p>
-
-                        <p><strong>Ne-Waza :</strong> Le combat au sol, incluant le contrôle et la soumission.</p>
-
-                        <p><strong>Finalisation et Maîtrise</strong></p>
-                        <p>L'objectif est de neutraliser un agresseur ou un partenaire en utilisant la force de l'adversaire contre lui-même. Chaque technique de finalisation se termine soit par un <strong>étranglement</strong>, soit par une <strong>luxation</strong> (clé) appliquée sur les articulations (épaule, coude, poignet, hanche, genou, cheville).</p>
-
-                        <p><strong>L'esprit WLS :</strong> Le but est de maîtriser son adversaire et de le contraindre à l'abandon. La technique prime toujours sur la force brute.</p>
-
-                        <p><strong>Compétition et Progression</strong></p>
-                        <p>En compétition, les pratiquants s'affrontent pour obtenir une <strong>finalisation</strong>. Si aucun des combattants ne parvient à faire abandonner son adversaire avant la fin du temps réglementaire, un <strong>système de points</strong> (basé sur la qualité des projections, des contrôles au sol et de l'interactivité) permet de désigner le vainqueur.</p>
+    <section class="disciplines-section">
+        <div class="container">
+            <h2 class="section-title">Découvrez nos arts</h2>
+            
+            <div class="flex-wrapper">
+                
+                <article class="card">
+                    <div class="card__img-container">
+                        <img src="https://club-mma-toulouse.com/wp-content/uploads/2024/09/section-loisirs-club-boxe-mma-toulouse-1024x684.webp" alt="MMA">
                     </div>
-                </div>
-            </div>
-            <div class="disc-mma">
-                <div>
-                    <img src="https://club-mma-toulouse.com/wp-content/uploads/2024/09/section-loisirs-club-boxe-mma-toulouse-1024x684.webp" alt="Jiu-Jitsu">
-                </div>
-                <div class="disc-mmaTxt">
-                    <div>
-                        
+                    <div class="card__body">
+                        <h3>Mixed Martial Arts</h3>
+                        <p>Le mix complet : striking, lutte et sol. Devenez un combattant complet dans notre cage.</p>
+                        <span class="card__tag">Complet</span>
                     </div>
-                </div>
-            </div>
-        </section>
-    </main>
+                </article>
 
-    <footer>
-                    <div class="footer-anchor"> 
-                    <!--ANCRE / Pour retour en haut de page ou là où je le veux, là où se trouve l'id indiqué dans href-->
-                    <a href="#anchor">Retour en haut de la page</a>
+                <article class="card">
+                    <div class="card__img-container">
+                        <img src="https://images.unsplash.com/photo-1564415315949-7a0c4c73aab4?q=80&w=800" alt="Jiu-Jitsu Brésilien">
                     </div>
-                    <section>
-                        <div class="footer-content">
-                            <div>
-                            <img class="logo" src="../img/content/LogoWLS.png" alt="WLS Logo">
-                            </div>
+                    <div class="card__body">
+                        <h3>Jiu-Jitsu Brésilien</h3>
+                        <p>L'art de la soumission au sol. Technique et stratégie pour vaincre sans frapper.</p>
+                        <span class="card__tag">Sol</span>
+                    </div>
+                </article>
 
-                            <nav>
-                            <ul>
-                                <li><a href="#">Mentions Légales</a></li>
-                                <li><a href="#">Confidentialité</a></li>
-                                <li><a href="link/contact.html">Contact</a></li>
-                            </ul>
-                            </nav>
+                <article class="card">
+                    <div class="card__img-container">
+                        <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=800" alt="Boxe">
+                    </div>
+                    <div class="card__body">
+                        <h3>Boxe Anglaise</h3>
+                        <p>Le noble art. Travaillez votre jeu de jambes, votre garde et la précision de vos poings.</p>
+                        <span class="card__tag">Striking</span>
+                    </div>
+                </article>
 
-                            <div class="footer-socials">
-                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-                            <a class="groslogo" href="#"aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                            <a class="groslogo" href="#"aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            <a class="groslogo" href="#"aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a class="groslogo" href="#"aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
-                            <a class="groslogo" href="#"aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
+                <article class="card">
+                    <div class="card__img-container">
+                        <img src="https://images.unsplash.com/photo-1552072092-7f9b1d63efcb?q=80&w=800" alt="Judo">
+                    </div>
+                    <div class="card__body">
+                        <h3>Judo</h3>
+                        <p>Maîtrisez l'équilibre et les projections spectaculaires pour neutraliser l'adversaire.</p>
+                        <span class="card__tag">Projections</span>
+                    </div>
+                </article>
 
-                        </div>
-                        <div class="footer-bottom">
-                            <p>2026 WLS - Tous droits réservés</p>
-                        </div>
-                    </section>
-                </footer>
-    <script src="../index.js"></script>
+                <article class="card">
+                    <div class="card__img-container">
+                        <img src="https://le-cdn.website-editor.net/s/1585872c5b824aff8bd0d2717d21eb6b/dms3rep/multi/opt/IMG_9436-1920w.JPG" alt="Jujitsu">
+                    </div>
+                    <div class="card__body">
+                        <h3>Jiu-Jitsu Traditionnel</h3>
+                        <p>L'art de défense des samouraïs incluant frappes, luxations et étranglements.</p>
+                        <span class="card__tag">Défense</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__anchor">
+        <a href="#anchor"><i class="fas fa-arrow-up"></i> Retour en haut</a>
+    </div>
+
+    <div class="footer__container">
+        <div class="footer__column">
+            <img src="../img/content/LogoWLS.png" alt="Logo WLS" class="footer__logo">
+            <p>Votre club de sport de combat nouvelle génération.</p>
+        </div>
+
+        <nav class="footer__column">
+            <h4>Liens utiles</h4>
+            <ul>
+                <li><a href="#">Mentions Légales</a></li>
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer__column">
+            <h4>Suivez l'aventure</h4>
+            <div class="footer__socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer__copyright">
+        <p>2026 WLS - Tous droits réservés</p>
+    </div>
+</footer>
+
+<script src="../index.js"></script>
 </body>
 </html>
