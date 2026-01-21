@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+
     <title>WLS Combat Sport</title>
   </head>
   <body>
-    <header> <!--TODO: Commencer à copier pour les autres pages d'ici-->
+    <header>
+      <!--TODO: Commencer à copier pour les autres pages d'ici-->
       <div class="header-logo-container">
         <img src="./img/content/LogoWLS.png" alt="logo-du-site" />
       </div>
@@ -25,11 +24,14 @@
       <nav id="navMenu">
         <ul class="menu">
           <li><a class="menuItem" href="./index.html">Accueil</a></li>
-          <li><a class="menuItem" href="./pages/disciplines.html">Disciplines</a></li>
+          <li>
+            <a class="menuItem" href="./pages/disciplines.html">Disciplines</a>
+          </li>
           <li><a class="menuItem" href="./pages/contact.html">Contact</a></li>
         </ul>
       </nav>
-    </header> <!--TODO: à ici-->
+    </header>
+    <!--TODO: à ici-->
 
     <main class="index-main">
       <section class="main-section">
@@ -163,6 +165,50 @@
         </div>
       </section>
     </main>
+
+    <footer>
+      <div class="footer-anchor">
+        <!--ANCRE / Pour retour en haut de page ou là où je le veux, là où se trouve l'id indiqué dans href-->
+        <a href="#anchor">Retour en haut de la page</a>
+      </div>
+      <section>
+        <div class="footer-content">
+          <div>
+            <img class="logo" src="./img/content/LogoWLS.png" alt="WLS Logo" />
+          </div>
+
+          <nav>
+            <ul>
+              <li><a href="#">Mentions Légales</a></li>
+              <li><a href="#">Confidentialité</a></li>
+              <li><a href="./pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer-socials">
+
+            <a class="groslogo" href="#" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a class="groslogo" href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a class="groslogo" href="#" aria-label="Twitter"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a class="groslogo" href="#" aria-label="Pinterest"
+              ><i class="fa-brands fa-pinterest"></i
+            ></a>
+            <a class="groslogo" href="#" aria-label="Youtube"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2026 WLS - Tous droits réservés</p>
+        </div>
+      </section>
+    </footer>
 
     <script src="./js/index.js"></script>
   </body>
