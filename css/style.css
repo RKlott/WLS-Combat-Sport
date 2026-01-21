@@ -363,6 +363,7 @@ header button {
     width: 30px;
     height: 3px;
     background-color: #fff;
+    border-radius: 5rem;
     transition: 0.3s;
   }
   header .burger-btn.active .bar:nth-child(1) {
