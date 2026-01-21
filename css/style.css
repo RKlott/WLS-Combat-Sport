@@ -334,6 +334,12 @@ main {
   transform: translateX(-50%);
 }
 
+@media screen and (max-width: 900px) {
+  main {
+    padding-top: 10rem;
+  }
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -462,17 +468,21 @@ header nav ul li a:hover {
 }
 @media screen and (max-width: 900px) {
   .index-main .martial_arts-section {
+    display: flex;
     flex-direction: column;
     gap: 5rem;
   }
 }
-.index-main .martial_arts-section div {
-  text-align: center;
+@media screen and (max-width: 900px) {
+  .index-main .martial_arts-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 900px) {
   .index-main .martial_arts-section div p {
     width: 60%;
-    justify-self: center;
   }
 }
 .index-main .martial_arts-section div img {
