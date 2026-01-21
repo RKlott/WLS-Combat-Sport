@@ -17,7 +17,7 @@ document.querySelectorAll('.menuItem').forEach(link => {
 });
 
 // // ANIMATION RETOUR HAUT DE PAGE
-document.querySelector('.anchor').addEventListener('click', function(e) {
+document.querySelector('.footer-anchor a').addEventListener('click', function(e) {
   e.preventDefault();
   
   const targetId = this.getAttribute('href').substring(1);

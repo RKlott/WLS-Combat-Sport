@@ -809,6 +809,38 @@ footer section .footer-bottom {
 }
 
 /*----------------------------FIN FOOTER-----------------------------*/
+/*----------------------------Scroll bar------------------------------*/
+#info {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#wrapper {
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+#style-10::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: black;
+  border-radius: 10px;
+}
+
+#style-10::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(5, 6, 9);
+}
+
+#style-10::-webkit-scrollbar-thumb {
+  background-color: rgb(51, 51, 51);
+  border-radius: 10px;
+  background: rgb(163, 0, 3);
+}
+
+/*----------------------------FIN Scroll bar------------------------------*/
 #disc-main {
   max-width: none;
   padding: 0;
