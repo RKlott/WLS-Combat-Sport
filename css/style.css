@@ -362,7 +362,8 @@ header button {
   header .burger-btn .bar {
     width: 30px;
     height: 3px;
-    background-color: #333;
+    background-color: #fff;
+    border-radius: 5rem;
     transition: 0.3s;
   }
   header .burger-btn.active .bar:nth-child(1) {
@@ -396,7 +397,7 @@ header button {
     list-style: none;
   }
   header nav .menu a {
-    color: #fff;
+    color: #fff !important;
     font-weight: 800;
   }
 }
