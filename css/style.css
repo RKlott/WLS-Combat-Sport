@@ -517,7 +517,7 @@ header nav ul li a:hover {
   display: flex;
   height: 70vh;
   gap: 3rem;
-  margin-bottom: 8rem;
+  margin-bottom: 12rem;
 }
 @media screen and (max-width: 900px) {
   .index-main .discover-us {
