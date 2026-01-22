@@ -49,3 +49,12 @@ document.querySelector('.footer-anchor a').addEventListener('click', function(e)
   }
 });
 // // FIN ANIMATION RETOUR HAUT DE PAGE
+
+//TODO: Fonction qui change l'image au clique de la souris
+window.addEventListener("mouseup", () => {
+  document.body.classList.add("onclick");
+});
+
+window.addEventListener("mousedown", () => {
+document.body.classList.remove("onclick");
+});
