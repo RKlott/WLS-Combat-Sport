@@ -1,56 +1,257 @@
-#disc-main{
-    max-width: none;
+// --- BASE ---
+* {
+    margin: 0;
     padding: 0;
-    h1{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-dark;
+    color: $text-light;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+// --- HEADER ---
+.header {
+    background-color: rgba($bg-dark, 0.95);
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex; // Utilisation Flexbox
+    align-items: center;
+
+    &__container {
+        width: 95%;
+        max-width: $max-width;
+        margin: 0 auto;
         display: flex;
-        justify-content: center;
-        font-size: 8em;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo img {
+        height: 50px;
     }
 }
 
-.discipline-imgAccueil{
+.nav {
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        transition: color $transition-speed;
+
+        &:hover, &--active {
+            color: $accent-color;
+            border-bottom: 2px solid $accent-color;
+        }
+    }
+}
+
+// --- BANNER ---
+.hero-banner {
+    position: relative;
+    height: 60vh;
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 100%;
-    background-color: $BackBlack;
-        img{
-            width: 50%;
-        }
-}
-.disc-jiujitsu{
-    display: flex;
-    margin: 0 20px 0 20px;
-    img{
-        width: 700px;
-    }
-    .disc-jiujitsuTxt{
-        div{
-            padding: 20px 50px 20px 50px;
-            p{
-            text-align: left;
-            padding-bottom: 8px;
-        }
+    text-align: center;
+    overflow: hidden;
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
         }
         
+        p {
+            font-size: 1.2rem;
+            color: $text-dim;
+        }
     }
-    
+
+    .hero-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+        z-index: 1;
+    }
 }
-.disc-mma{
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 0 20px 0 20px;
-    img{
-        width: 700px;
+
+// --- SECTION DISCIPLINES ---
+.disciplines-section {
+    padding: 60px 0;
+
+    .container {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 0 20px;
     }
-    .disc-mmaTxt{
-        div{
-            padding: 20px 50px 20px 50px;
-            p{
-            text-align: left;
-            padding-bottom: 8px;
-        }
-        }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        position: relative;
         
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: $accent-color;
+            margin: 10px auto;
+        }
     }
-    
 }
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap; // Permet de passer à la ligne
+    justify-content: center; // Centre les cartes si elles sont seules sur une ligne
+    gap: 25px; // Espace entre les cartes
+}
+
+// --- CARDS ---
+.card {
+    background-color: $bg-card;
+    flex: 1 1 300px; // Flex-grow, Flex-shrink, Flex-basis (min 300px)
+    max-width: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    transition: all $transition-speed ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+
+    &:hover {
+        transform: scale(1.05);
+        border-color: rgba($text-light, 0.8);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+
+    &__img-container {
+        height: 200px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        p {
+            color: $text-dim;
+            font-size: 0.95rem;
+            min-height: 60px; // Aligne le texte
+        }
+    }
+
+    &__tag {
+        align-self: flex-start; // Colle le tag à gauche
+        background: rgba($accent-color, 0.2);
+        color: $accent-color;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        border: 1px solid $accent-color;
+    }
+}
+
+// --- FOOTER ---
+.footer {
+    background-color: darken($bg-dark, 5%);
+    margin-top: 60px;
+    padding-bottom: 20px;
+
+    &__anchor {
+        text-align: center;
+        padding: 20px 0;
+        background: rgba(255,255,255,0.05);
+        
+        a:hover { color: $accent-color; }
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    &__column {
+        flex: 1 1 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h4 {
+            text-transform: uppercase;
+            color: $accent-color;
+            margin-bottom: 5px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            color: $text-dim;
+            &:hover { color: $text-light; }
+        }
+    }
+
+    &__logo {
+        height: 40px;
+        width: fit-content;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 20px;
+        font-size: 1.5rem;
+        a:hover { color: $accent-color; }
+    }
+
+    &__copyright {
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 20px;
+        color: $text-dim;
+        font-size: 0.8rem;
+    }
+}
+
