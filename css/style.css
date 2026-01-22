@@ -335,11 +335,11 @@ main {
 }
 
 body {
-  cursor: url("../../img/cursor-images/boxing-gloves.png") 16 16, auto;
+  cursor: url("../../img/cursor-images/boxing-gloves.png") 36 36, auto;
 }
 
 body.onclick {
-  cursor: url("../../img/cursor-images/punching-gloves.png") 16 16, auto;
+  cursor: url("../../img/cursor-images/punching-gloves.png") 36 36, auto;
 }
 
 @media screen and (max-width: 900px) {
