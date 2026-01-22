@@ -104,7 +104,7 @@ header {
 
   .header-logo-container {
     display: flex;
-
+    cursor: pointer;
 
     img {
         
@@ -114,7 +114,11 @@ header {
       box-shadow: 0 0 10px $Grey-beige;
       border-radius: 5px;
       padding-left: 6px;
-    
+      transition: transform 0.3s ease; 
+      
+      &:hover {
+        transform: scale(1.1);
+        }
     }
   }
 
