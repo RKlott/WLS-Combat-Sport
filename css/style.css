@@ -394,16 +394,18 @@ header button {
     top: 0;
     right: -100%;
     width: 40%;
-    height: 100vh;
+    height: 69.8vh;
     background: rgb(163, 0, 3);
     transition: 0.4s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     border-left: 2px solid rgb(2, 2, 2);
+    border-bottom: 2px solid rgb(2, 2, 2);
   }
   header nav.active {
     right: 0;
+    z-index: 999;
   }
   header nav .menu {
     flex-direction: column;
