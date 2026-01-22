@@ -334,6 +334,14 @@ main {
   transform: translateX(-50%);
 }
 
+body {
+  cursor: url("../../img/cursor-images/boxing-gloves.png") 16 16, auto;
+}
+
+body.onclick {
+  cursor: url("../../img/cursor-images/punching-gloves.png") 16 16, auto;
+}
+
 @media screen and (max-width: 900px) {
   main {
     padding-top: 10rem;
