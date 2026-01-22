@@ -38,6 +38,7 @@ header {
       border: none;
       cursor: pointer;
       z-index: 1000;
+
       align-self: center;
 
       .bar {
@@ -68,16 +69,19 @@ header {
       top: 0;
       right: -100%; // Caché à droite par défaut
       width: 40%; // Largeur du menu mobile
-      height: 100vh;
+      height: 69.8vh;
       background: $oxblood;
       transition: 0.4s ease;
       display: flex;
       justify-content: center;
       align-items: center;
       border-left: 2px solid rgb(2, 2, 2);
+      border-bottom: 2px solid rgb(2, 2, 2);
+
 
       &.active {
         right: 0; // Apparaît à l'écran
+        z-index: 999;
       }
 
       .menu {
