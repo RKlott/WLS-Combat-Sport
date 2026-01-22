@@ -692,6 +692,7 @@ a:active {
     background: rgb(51, 51, 51);
     border-radius: 8px;
     text-align: left;
+    margin-bottom: 45px;
   }
   .contact-lecture h2 {
     font-size: 20px;
